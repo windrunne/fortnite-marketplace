@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+  --purple-primary: #8B5CF6;
+  --purple-light: #A78BFA;
+  --purple-dark: #7C3AED;
+  --green-accent: #4ADE80;
+  --cyan-accent: #22D3EE;
+  --yellow-accent: #FACC15;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  min-height: 100vh;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+  
+  h1 {
+    @apply text-4xl;
+  }
+  
+  h2 {
+    @apply text-3xl;
+  }
+  
+  h3 {
+    @apply text-2xl;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-purple-600 hover:bg-purple-500 text-white font-bold py-2 px-4 rounded shadow-[0_0_15px_rgba(168,85,247,0.7)] transition-all duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-800 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded;
+  }
+  
+  .input-field {
+    @apply bg-gray-800 text-white rounded-full px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-purple-600;
+  }
+  
+  .card {
+    @apply bg-gray-800 rounded-lg overflow-hidden;
+  }
+  
+  /* Toggle Switch */
+  .toggle-switch {
+    @apply relative w-12 h-6 rounded-full cursor-pointer bg-gray-800 border border-gray-700;
+  }
+  
+  .toggle-handle {
+    @apply absolute top-0.5 w-5 h-5 rounded-full transition-all duration-200;
+  }
+  
+  .toggle-handle-on {
+    @apply right-0.5 bg-white;
+  }
+  
+  .toggle-handle-off {
+    @apply left-0.5 bg-gray-500;
+  }
+  
+  /* Purple Glow Effect */
+  .purple-glow {
+    @apply shadow-[0_0_15px_rgba(168,85,247,0.7)] hover:shadow-[0_0_20px_rgba(168,85,247,0.9)];
+  }
+  
+  .purple-button {
+    @apply bg-purple-600 hover:bg-purple-500 text-white transition-all duration-200 purple-glow;
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  /* Custom scrollbar styles */
+  .custom-scrollbar::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #1f1f1f;
+    border-radius: 3px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #8B5CF6;
+    border-radius: 3px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #7C3AED;
+  }
+  
+  /* Firefox scrollbar */
+  .custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #8B5CF6 #1f1f1f;
+  }
+}
