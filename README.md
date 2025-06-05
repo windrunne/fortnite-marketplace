@@ -1,4 +1,7 @@
 # Fortnite Accounts Marketplace
+![image](https://github.com/user-attachments/assets/2d90a07a-5074-4cee-9c04-253a1d830bdd)
+
+![image](https://github.com/user-attachments/assets/fde7351c-5ac8-4829-b385-23471a763f73)
 
 A modern, responsive marketplace application for Fortnite accounts built with Next.js 14 App Router, React, and Tailwind CSS.
 
